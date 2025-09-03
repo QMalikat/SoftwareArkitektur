@@ -1,22 +1,3 @@
-# 
-
-**About arc42**
-
-arc42, the template for documentation of software and system
-architecture.
-
-Template Version 8.2 EN. (based upon AsciiDoc version), January 2023
-
-Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
-contributors. See <https://arc42.org>.
-
-::: note
-This version of the template contains some help and explanations. It is
-used for familiarization with arc42 and the understanding of the
-concepts. For documentation of your own system you use better the
-*plain* version.
-:::
-
 # Introduction and Goals {#section-introduction-and-goals}
 
 Describes the relevant requirements and the driving forces that software
@@ -34,23 +15,17 @@ architects and development team must consider. These include
 
 ## Requirements Overview {#_requirements_overview}
 
-::: formalpara-title
 **Contents**
-:::
+En app til studerende der fremvise steder der serverer alkohol, med formålet om at støtte sociale sammenkomster. 
+Appen skal give kort information rutevejledning, pris, venners placering og et rating system.
 
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
+**Motivation - User stories**
+- US1: Som studerende ønsker jeg en oversigt over alle locationer der serverer alkohol, for at have et nemt overblik.
+- US2: Som studerene vil jeg kunne vælge rute via maps, så jeg hurtigere kan finde vej.
+- US3: Som studerende ønsker jeg et anslået prisleje på hver location, så jeg kan vælge udfra min saldo.
+- US4: Som studerende vil jeg kunne se hvor mine venner er, så vi nemmere kan finde hinanden.
+- US5: Som studerende vil jeg kunne give hver location en rating, så jeg nemmere kan sorterer i mulighederne.
 
-::: formalpara-title
-**Motivation**
-:::
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-::: formalpara-title
 **Form**
 :::
 
