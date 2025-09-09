@@ -10,7 +10,30 @@ if (Vælg visning?) then (Kort)
     :Vælg GPS for nærliggende lokationer;
     :Klik på ikon for lokation;
     :Fremviser popup info-tekst om valgte lokation;
-    }
+    note right
+  Info-tekst fremviser:
+  - Rating
+  - Prisleje
+  - Antal venner på lokationen
+end note
+    
+    if (Ekstra funktioner?) then (Se venner)
+      partition "Venner" {
+        :Viser hvem der er på lokationen;
+        if (Se rutevejledning?) then (Ja)
+          partition "Maps" {
+            :Få rutevejledning til valgte lokation;
+            :Connecter til anden app;
+          }
+        endif
+      }
+    else (Rutevejledning)
+      partition "Maps" {
+        :Få rutevejledning til valgte lokation;
+        :Connecter til anden app;
+      }
+    endif
+  }
 else (Liste)
   partition "Liste" {
     :Liste over lokationer;
@@ -20,28 +43,35 @@ else (Liste)
       :Vælg sortér efter rating;
     endif
     :Fremviser info-tekst om valgte lokation;
-  }
-endif
-
-if (Ekstra funktioner) then (Se venner)
-    partition "Venner" {
-        :Viser hvem der er på lokationen;
-    }  
-else (Rutevejledning)
-    partition "Maps" {
-        :Maps → For at få rute til valgte lokation;
-    }
-endif
-
-:Luk App;
-stop
-
-:Popup info-tekst om valgte lokation;
-note right
+    note right
   Info-tekst fremviser:
   - Rating
   - Prisleje
   - Antal venner på lokationen
 end note
+    
+    if (Ekstra funktioner?) then (Se venner)
+      partition "Venner" {
+        :Viser hvem der er på lokationen;
+        if (Se rutevejledning?) then (Ja)
+          partition "Maps" {
+            :Få rutevejledning til valgte lokation;
+            :Connecter til anden app;
+          }
+        endif
+      }
+    else (Rutevejledning)
+      partition "Maps" {
+        :Få rutevejledning til valgte lokation;
+        :Connecter til anden app;
+      }
+    endif
+  }
+endif
 
-@enduml
+:Luk App;
+
+
+
+stop
+@endu
