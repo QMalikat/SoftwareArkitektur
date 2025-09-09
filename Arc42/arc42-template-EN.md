@@ -691,101 +691,49 @@ See [Architecture Decisions](https://docs.arc42.org/section-9/) in the
 arc42 documentation. There you will find links and examples about ADR.
 
 # Chapter 10: Quality Requirements
+Dette kapitel beskriver alle relevante kvalitetskrav for applikationen. Se 
+De mest kritiske kvalitetskrav er allerede beskrevet i sektion 1.2 (Kvalitetsmål) og refereres her.  
+Derudover indeholder kapitlet kvalitetskrav med lavere prioritet, som er “nice-to-have” og ikke skaber høj risiko, hvis de ikke opfyldes fuldt ud.
 
-::: formalpara-title
-**Content**
-:::
+## Quality Requirements Overview
+| Kategori                 | Underkategori                           | Prioritet | Relaterede scenarier / Noter |
+|--------------------------|-----------------------------------------|-----------|------------------------------|
+| **Brugervenlighed**      | Intuitiv navigation                     | Høj       | QS1, QS2                     |
+|                          | Hurtig onboarding                       | Høj       | QS3                          |
+|                          | Klar informationsvisning                | Mellem    | QS4                          |
+| **Tilgængelighed**       | Fungerer på forskellige enheder         | Høj       | QS15                         |
+|                          | Offline visning af visse data           | Lav       | QS17 (nice-to-have)          |
+| **Pålidelighed**         | Stabil opdatering af venners placering  | Høj       | QS7, QS8                     |
+|                          | Håndtering af netværksfejl              | Mellem    | QS9                          |
+| **Ydelse**               | Hurtige indlæsningstider                | Høj       | QS5, QS6                     |
+|                          | Lav latenstid for realtidsdata          | Mellem    | QS7                          |
+| **Privatliv**            | Beskyttelse af brugerdata               | Høj       | QS10, QS11                   |
+|                          | Valgfri deling af lokation              | Høj       | QS12                         |
+| **Sikkerhed**            | Kryptering af følsomme data             | Høj       | QS10                         |
+|                          | Adgangskontrol og autentificering       | Høj       | QS18 (nice-to-have)          |
 
-This section contains all quality requirements as quality tree with
-scenarios. The most important ones have already been described in
-section 1.2. (quality goals)
+> Bemærk: Underkategorier som QS17 og QS18 er eksempler på mindre prioriterede krav (“nice-to-have”) og skaber ikke høj risiko, hvis de ikke implementeres fuldt ud.
 
-Here you can also capture quality requirements with lesser priority,
-which will not create high risks when they are not fully achieved.
 
-::: formalpara-title
-**Motivation**
-:::
+## Quality Scenarios 
+| Scenarie ID | Type       | Stimulus / Begivenhed                   | Forventet systemadfærd / Respons                     | Relateret krav / User Story | Prioritet |
+|------------|------------|----------------------------------------|--------------------------------------------------------|-----------------------------|-----------|
+| QS1        | Brug       | Bruger åbner appen første gang          | Onboarding gennemføres inden for 10 sekunder          | US1, F1                     | Høj       |
+| QS2        | Brug       | Bruger navigerer gennem lokationsliste  | UI indlæser ny side inden for 1 sekund                | US1, F2                     | Høj       |
+| QS3        | Brug       | Ny bruger tilmelder sig                 | Registrering gennemføres uden fejl                    | US1, F1                     | Høj       |
+| QS4        | Brug       | Bruger ser pris- og ratinginfo          | Data vises korrekt og tydeligt                        | US3, US5                    | Mellem    |
+| QS5        | Brug       | App indlæser kort/liste over lokationer | Liste/kort fuldt indlæst inden for 2 sekunder         | US1, F1                     | Høj       |
+| QS6        | Brug       | Flere brugere forespørger ruter         | System svarer uden mærkbar forsinkelse                | US2, F3                     | Høj       |
+| QS7        | Brug       | Bruger anmoder om venners realtidsplacering | Opdateret placering vises inden for 5 sekunder    | US4, F7                     | Høj       |
+| QS8        | Ændring    | Backend service opdateres / går ned     | System gendanner automatisk; datakonsistens opretholdes | F7, F8                    | Høj       |
+| QS9        | Ændring    | Netværksforbindelse mistes under brug   | System håndterer fejlen og prøver igen automatisk     | F7, F8                      | Mellem    |
+| QS10       | Brug       | Bruger indsender personlige data        | Data gemmes sikkert med kryptering                    | US4, F8                     | Høj       |
+| QS11       | Brug       | Admin tilgår brugeranalyser             | Kun anonymiserede data tilgængelige                   | F7, F8                      | Høj       |
+| QS12       | Brug       | Bruger slår lokationsdeling til/fra     | Lokationsdeling aktiveres/deaktiveres straks          | US4, F8                     | Høj       |
+| QS15       | Brug       | App åbnes på forskellige enheder        | Layout og funktionalitet tilpasses korrekt            | F1, F2                      | Mellem    |
+| QS17       | Brug       | Bruger forsøger offline adgang          | Begrænset data vises uden netværk                     | Nice-to-have                | Lav       |
+| QS18       | Ændring    | Admin opretter ny adgangsrolle         | Adgangskontrol implementeres korrekt                   | Nice-to-have                | Lav       |
 
-Since quality requirements will have a lot of influence on architectural
-decisions you should know for every stakeholder what is really important
-to them, concrete and measurable.
-
-See [Quality Requirements](https://docs.arc42.org/section-10/) in the
-arc42 documentation.
-
-## Quality Tree {#_quality_tree}
-
-::: formalpara-title
-**Content**
-:::
-
-The quality tree (as defined in ATAM -- Architecture Tradeoff Analysis
-Method) with quality/evaluation scenarios as leafs.
-
-::: formalpara-title
-**Motivation**
-:::
-
-The tree structure with priorities provides an overview for a sometimes
-large number of quality requirements.
-
-::: formalpara-title
-**Form**
-:::
-
-The quality tree is a high-level overview of the quality goals and
-requirements:
-
--   tree-like refinement of the term \"quality\". Use \"quality\" or
-    \"usefulness\" as a root
-
--   a mind map with quality categories as main branches
-
-In any case the tree should include links to the scenarios of the
-following section.
-
-## Quality Scenarios {#_quality_scenarios}
-
-::: formalpara-title
-**Contents**
-:::
-
-Concretization of (sometimes vague or implicit) quality requirements
-using (quality) scenarios.
-
-These scenarios describe what should happen when a stimulus arrives at
-the system.
-
-For architects, two kinds of scenarios are important:
-
--   Usage scenarios (also called application scenarios or use case
-    scenarios) describe the system's runtime reaction to a certain
-    stimulus. This also includes scenarios that describe the system's
-    efficiency or performance. Example: The system reacts to a user's
-    request within one second.
-
--   Change scenarios describe a modification of the system or of its
-    immediate environment. Example: Additional functionality is
-    implemented or requirements for a quality attribute change.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Scenarios make quality requirements concrete and allow to more easily
-measure or decide whether they are fulfilled.
-
-Especially when you want to assess your architecture using methods like
-ATAM you need to describe your quality goals (from section 1.2) more
-precisely down to a level of scenarios that can be discussed and
-evaluated.
-
-::: formalpara-title
-**Form**
-:::
-
-Tabular or free form text.
 
 # Chapter 11: Risks and Technical Debts 
 
