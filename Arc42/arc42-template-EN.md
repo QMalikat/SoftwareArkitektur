@@ -1,9 +1,13 @@
 # Table of contents
+1. [Chapter 1: Introduction and Goals](#chapter-1-introduction-and-goals)
+2. [Chapter 2: Architecture Constraints](#chapter-2-architecture-constraints)
+3. [Chapter 3: Context and Scope](#chapter-3-Context-and-Scope)
+4. [Chapter 4: Solution Strategy](#chapter-4-Solution-Strategy)
+5. [Chapter 5: Building Block View](#chapter-5-building-block-view)
 
 
 
-
-# Introduction and Goals
+#Chapter 1: Introduction and Goals
 Systemet er en mobilapplikation, der henvender sig til studerende med det formål at fremme sociale interaktioner. Applikationen præsenterer både kort- og listevisning af nærliggende lokationer og giver yderligere information om prisniveau, antal tilstedeværende studiekammerater, brugervurdering samt rutevejledning. Den er designet til at styrke det sociale liv blandt studerende, øge trivsel og reducere frafald fra uddannelserne.
 
 ## Requirements Overview
@@ -65,7 +69,7 @@ Requirements](images/1_QualityGoals.png)
 
 
 
-# Architecture Constraints {#section-architecture-constraints}
+# Chapter 2: Architecture Constraints {#section-architecture-constraints}
 
 ::: formalpara-title
 **Contents**
@@ -96,7 +100,7 @@ documentation or naming conventions)
 See [Architecture Constraints](https://docs.arc42.org/section-2/) in the
 arc42 documentation.
 
-# Context and Scope {#section-context-and-scope}
+#Chapter 3: Context and Scope
 
 ::: formalpara-title
 **Contents**
@@ -197,7 +201,7 @@ and input/output.
 
 **\<Mapping Input/Output to Channels>**
 
-# Solution Strategy {#section-solution-strategy}
+#Chapter 4: Solution Strategy
 
 ::: formalpara-title
 **Contents**
@@ -237,7 +241,7 @@ in the following sections.
 See [Solution Strategy](https://docs.arc42.org/section-4/) in the arc42
 documentation.
 
-# Building Block View {#section-building-block-view}
+#Chapter 5: Building Block View {#section-building-block-view}
 
 ::: formalpara-title
 **Content**
@@ -440,7 +444,7 @@ Specifies the internal structure of *building block x.1*.
 
 *\<white box template>*
 
-# Runtime View {#section-runtime-view}
+#Chapter 6: Runtime View {#section-runtime-view}
 
 ::: formalpara-title
 **Contents**
@@ -508,7 +512,7 @@ documentation.
 
 ## \<Runtime Scenario n> {#__runtime_scenario_n}
 
-# Deployment View {#section-deployment-view}
+#Chapter 7: Deployment View {#section-deployment-view}
 
 ::: formalpara-title
 **Content**
@@ -615,7 +619,7 @@ Please copy the structure from level 1 for each selected element.
 
 *\<diagram + explanation>*
 
-# Cross-cutting Concepts {#section-concepts}
+#Chapter 8: Cross-cutting Concepts {#section-concepts}
 
 ::: formalpara-title
 **Content**
@@ -707,7 +711,7 @@ documentation.
 
 *\<explanation>*
 
-# Architecture Decisions {#section-design-decisions}
+#Chapter 9: Architecture Decisions {#section-design-decisions}
 
 ::: formalpara-title
 **Contents**
@@ -749,7 +753,7 @@ Various options:
 See [Architecture Decisions](https://docs.arc42.org/section-9/) in the
 arc42 documentation. There you will find links and examples about ADR.
 
-# Quality Requirements {#section-quality-scenarios}
+#Chapter 10: Quality Requirements {#section-quality-scenarios}
 
 ::: formalpara-title
 **Content**
@@ -846,7 +850,7 @@ evaluated.
 
 Tabular or free form text.
 
-# Risks and Technical Debts {#section-technical-risks}
+#Chapter 11: Risks and Technical Debts {#section-technical-risks}
 
 ::: formalpara-title
 **Contents**
@@ -877,7 +881,7 @@ measures to minimize, mitigate or avoid risks or reduce technical debts.
 See [Risks and Technical Debt](https://docs.arc42.org/section-11/) in
 the arc42 documentation.
 
-# Glossary {#section-glossary}
+#Chapter 12: Glossary {#section-glossary}
 
 ::: formalpara-title
 **Contents**
