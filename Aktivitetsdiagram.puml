@@ -4,30 +4,34 @@ title Aktivitetsdiagram for app: Unibar Locator
 start
 :Åbn app;
 
-partition "Kort / Liste" {
-    if (Vælg visning) then (Kort)
-        :Kort over lokationer;
-        :Vælg GPS for nærliggende lokationer;
-        :Klik på ikon for lokation;
-        :Fremviser popup info-tekst om valgte lokation;
-    else (Liste)
-        :Liste over lokationer;
-        if (Vælg sortering?) then (GPS)
-            :Vælg GPS for nærliggende lokationer;
-        else (Rating)
-            :Vælg sortér efter rating;
-        endif
-        :Fremviser info-tekst om valgte lokation;
+if (Vælg visning?) then (Kort)
+  partition "Kort" {
+    :Kort over lokationer;
+    :Vælg GPS for nærliggende lokationer;
+    :Klik på ikon for lokation;
+    :Fremviser popup info-tekst om valgte lokation;
+    }
+else (Liste)
+  partition "Liste" {
+    :Liste over lokationer;
+    if (Vælg sortering?) then (GPS)
+      :Vælg GPS for nærliggende lokationer;
+    else (Rating)
+      :Vælg sortér efter rating;
     endif
-}
+    :Fremviser info-tekst om valgte lokation;
+  }
+endif
 
-partition "Ekstra Muligheder" {
-    if (Vælg Ekstra funktion) then (Venner)
+if (Ekstra funktioner) then (Se venner)
+    partition "Venner" {
         :Viser hvem der er på lokationen;
-    else (Hvor)
+    }  
+else (Rutevejledning)
+    partition "Maps" {
         :Maps → For at få rute til valgte lokation;
-    endif
-}
+    }
+endif
 
 :Luk App;
 stop
