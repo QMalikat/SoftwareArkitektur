@@ -4,7 +4,7 @@
 
 
 # Introduction and Goals
-Systemet er en mobilapplikation, der henvender sig til studerende med behov for hurtigt og nemt at identificere relevante drikkesteder. Applikationen præsenterer et overskueligt overblik over lokationer i både kort- og listevisning og tilbyder desuden informationer om blandt andet brugerrating, prisniveau, antal tilstedeværende studiekammerater samt muligheden for at generere rutevejledning via korttjenester.
+Systemet er en mobilapplikation, der henvender sig til studerende med det formål at fremme sociale interaktioner. Applikationen præsenterer både kort- og listevisning af nærliggende lokationer og giver yderligere information om prisniveau, antal tilstedeværende studiekammerater, brugervurdering samt rutevejledning. Den er designet til at styrke det sociale liv blandt studerende, øge trivsel og reducere frafald fra uddannelserne.
 
 ## Requirements Overview
 | ID | User stories | Requirements |
@@ -15,8 +15,6 @@ Systemet er en mobilapplikation, der henvender sig til studerende med behov for 
 | US4 | Som studerende vil jeg kunne se hvor mine venner er, så vi nemmere kan finde hinanden. | Applikationen skal understøtte visning af venners tilstedeværelse på lokationer. |
 | US5 | Som studerende vil jeg kunne give hver location en rating, så jeg nemmere kan sorterer i mulighederne. |  Brugere skal kunne vurdere og bedømme lokationer. |
 
-**Motivation** <br>
-Applikationen er designet til at understøtte det sociale liv blandt studerende med henblik på at reducere frafald. Den tilbyder et værktøj, hvor studerende kan få overblik over prisvenlige muligheder for forplejning. Formålet er at fremme sociale relationer og dermed øge både trivsel og fastholdelse på studiet.
 
 **Form** <br>
 Se funktionelle krav gennem user stories. (USandFK.md)
@@ -27,63 +25,45 @@ Se funktionelle krav gennem user stories. (USandFK.md)
 ![Categories of Quality
 Requirements](images/1_QualityGoals.png)
 
-::: formalpara-title
-**Motivation**
+
+**Motivation for interessenter**
 | Interessent         | Kvalitetsmål                                                                 |
 |---------------------|-------------------------------------------------------------------------------|
-| **Studerende**      | - Skal kunne finde drikkesteder og rutevejledning første gang uden introduktion.<br>- Lokationsoversigt skal indlæses på under 2 sekunder.<br>- Venne-funktion skal fungere stabilt og pålideligt.<br>- Deling af lokation/persondata skal altid være frivillig og let at slå fra. |
 | **Uddannelsesinstitution** | - Appen skal understøtte sociale relationer og reducere frafald.<br>- Privatliv og sikkerhed skal være garanteret for at beskytte institutionens omdømme. |
 | **Lokationsejere**  | - Information om lokationer skal være korrekt og nem at opdatere. |
+| **Studerende**      | - Skal kunne finde lokationer og rutevejledning første gang uden introduktion.<br>- Lokationsoversigt skal indlæses på under 2 sekunder.<br>- Venne-funktion skal fungere stabilt og pålideligt.<br>- Deling af lokation/persondata skal altid være frivillig og let at slå fra. |
+
+**Funktionelt krav og kvalitetsmål**
+| Funktionelt krav | Relateret kvalitetsmål |
+|------------------|-------------------------|
+| F1 – Kort med nærliggende lokationer | Brugervenlighed, Ydelse |
+| F2 – Liste sorteret efter afstand | Brugervenlighed, Ydelse |
+| F3 – Integration med Maps | Brugervenlighed, Tilgængelighed |
+| F4 – Fremvise rute til lokation | Brugervenlighed |
+| F5 – Fremvise prisleje | Brugervenlighed |
+| F6 – Sortere lokationer efter prisleje | Brugervenlighed |
+| F7 – Fremvise venners placering i realtid | Pålidelighed, Privatliv |
+| F8 – Slå deling af placering til/fra | Privatliv, Sikkerhed |
+| F9 – Fremvise rating-system | Brugervenlighed |
+| F10 – Gennemsnitlig rating | Brugervenlighed |
+| F11 – Sortere lokationer efter rating | Brugervenlighed |
+| F12 – Give brugere mulighed for at rate | Brugervenlighed, Pålidelighed |
 
 
-::: formalpara-title
-**Form**
-:::
+## Stakeholders 
+| Stakeholder                       | Rolle / Beskrivelse                                    | Behov / Interesse i systemet                                                        |
+|-----------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------|
+| Studerende                        | Primære brugere af appen                               | Overblik over sociale aktiviteter, brugervenlighed, sociale funktioner, prisniveau  |
+| Lokationsejere                    | Ejere af lokationer der serverer alkohol               | Synlighed, korrekt information, mulighed for at opdatere indhold                    |
+| Uddannelsesinstitution            | Videregående uddannelsessteder                         | Data om deltagelse, fremme trivsel, integration med eksisterende systemer           |
+| Systemadministrator / IT-team     | Ansvarlig for drift og vedligeholdelse                 | Arkitekturforståelse, dokumentation, sikkerhed og stabilitet                        |
+| Udviklingsteam                    | Implementering og videreudvikling                      | Detaljeret arkitektur, kodebase, dokumentation, beslutningsinput                    |
+| Designere / UX-ansvarlige         | Ansvarlige for brugeroplevelse                         | Forståelse af funktioner og begrænsninger, input til arkitekturvalg                 |
+| Marketing / Kommunikation         | Promovering af appen                                   | Information om funktioner, brugerdemografi, branding                                |
+| Eksterne tjenesteudbydere         | Korttjenester, notifikationer, betalingsgateways       | API-adgang, tekniske krav, kompatibilitet                                           |
+| Forældre / værger (indirekte)     | Bekymrede for studerendes sikkerhed og trivsel         | Informationssikkerhed og datahåndtering                                             |
 
-A table with quality goals and concrete scenarios, ordered by priorities
 
-## Stakeholders {#_stakeholders}
-
-::: formalpara-title
-**Contents**
-:::
-
-Explicit overview of stakeholders of the system, i.e. all person, roles
-or organizations that
-
--   should know the architecture
-
--   have to be convinced of the architecture
-
--   have to work with the architecture or with code
-
--   need the documentation of the architecture for their work
-
--   have to come up with decisions about the system or its development
-
-::: formalpara-title
-**Motivation**
-:::
-
-You should know all parties involved in development of the system or
-affected by the system. Otherwise, you may get nasty surprises later in
-the development process. These stakeholders determine the extent and the
-level of detail of your work and its results.
-
-::: formalpara-title
-**Form**
-:::
-
-Table with role names, person names, and their expectations with respect
-to the architecture and its documentation.
-
-+-------------+---------------------------+---------------------------+
-| Role/Name   | Contact                   | Expectations              |
-+=============+===========================+===========================+
-| *\<Role-1>* | *\<Contact-1>*            | *\<Expectation-1>*        |
-+-------------+---------------------------+---------------------------+
-| *\<Role-2>* | *\<Contact-2>*            | *\<Expectation-2>*        |
-+-------------+---------------------------+---------------------------+
 
 # Architecture Constraints {#section-architecture-constraints}
 
