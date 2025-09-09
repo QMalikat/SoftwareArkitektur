@@ -14,7 +14,7 @@
 
 
 # Chapter 1: Introduction and Goals
-Systemet er en mobilapplikation, der henvender sig til studerende med det formål at fremme sociale interaktioner. Applikationen præsenterer både kort- og listevisning af nærliggende lokationer og giver yderligere information om prisniveau, antal tilstedeværende studiekammerater, brugervurdering samt rutevejledning. Den er designet til at styrke det sociale liv blandt studerende, øge trivsel og reducere frafald fra uddannelserne.
+Unibar Locator er en mobilapplikation, der henvender sig til studerende med det formål at fremme sociale interaktioner. Applikationen præsenterer både kort- og listevisning af nærliggende lokationer og giver yderligere information om prisniveau, antal tilstedeværende studiekammerater, brugervurdering samt rutevejledning. Den er designet til at styrke det sociale liv blandt studerende, øge trivsel og reducere frafald fra uddannelserne.
 
 ## Requirements Overview
 | ID | User stories | Requirements |
@@ -108,104 +108,35 @@ arc42 documentation.
 
 # Chapter 3: Context and Scope
 
-::: formalpara-title
-**Contents**
-:::
+## Business Context
+Systemet, Unibar locator, er en mobilapplikation, der forbinder studerende med nærliggende lokationer og medstuderende for at fremme sociale interaktioner. Systemet fungerer som en “black box” mellem brugere, lokationsejere og institutioner, hvor det modtager forespørgsler, processerer data og leverer relevant information.
 
-Context and scope - as the name suggests - delimits your system (i.e.
-your scope) from all its communication partners (neighboring systems and
-users, i.e. the context of your system). It thereby specifies the
-external interfaces.
+### Business Context Diagram
+![Business Context Diagram](images/3_BuisnessDiagram.png)
 
-If necessary, differentiate the business context (domain specific inputs
-and outputs) from the technical context (channels, protocols, hardware).
+### Domain Interfaces Table
 
-::: formalpara-title
-**Motivation**
-:::
+| Communication Partner        | Inputs from Partner                                      | Outputs to Partner                                                                 |
+|-------------------------------|----------------------------------------------------------|----------------------------------------------------------------------------------|
+| Studerende                    | Søgeforespørgsler, rutevalg, rating, venneplacering     | Liste/kort med lokationer, rutevejledning, venners placering, prisestimat, ratings |
+| Lokationsejere                | Opdatering af lokationsinformation (åbningstid, priser)  | Bekræftelse af opdatering, statistik over besøg                                    |
+| Uddannelsesinstitution        | Ingen direkte input                                      | Anonymiseret data om deltagelse, sociale mønstre                                   |
+| Eksterne tjenester (Maps API) | Lokationsforespørgsler, ruteforespørgsler               | Kortdata, ruter, afstande, estimeret tid                                          |
+| Notifikationstjenester        | Meddelelser til brugere                                  | Push-notifikationer                                                               |
 
-The domain interfaces and technical interfaces to communication partners
-are among your system's most critical aspects. Make sure that you
-completely understand them.
 
-::: formalpara-title
-**Form**
-:::
+Forklaring:
+- Studerende interagerer med appen via UI for at finde lokationer, se venner og vælge ruter.
+- Lokationsejere kan opdatere deres information via en webportal eller API.
+- Uddannelsesinstitutioner modtager kun anonymiserede rapporter for at bevare privatliv.
+- Eksterne tjenester leverer tekniske data såsom kort og rutevejledning.
 
-Various options:
+## Technical Context
+Systemet kommunikerer med både interne og eksterne tekniske systemer. Dette inkluderer mobile enheder, servere, databaser og tredjeparts-API’er. Den tekniske kontekst beskriver både kanaler og protokoller.
 
--   Context diagrams
+![Techinal Context Diagram](images/3_TechinalDiagram.png)
 
--   Lists of communication partners and their interfaces.
 
-See [Context and Scope](https://docs.arc42.org/section-3/) in the arc42
-documentation.
-
-## Business Context {#_business_context}
-
-::: formalpara-title
-**Contents**
-:::
-
-Specification of **all** communication partners (users, IT-systems, ...)
-with explanations of domain specific inputs and outputs or interfaces.
-Optionally you can add domain specific formats or communication
-protocols.
-
-::: formalpara-title
-**Motivation**
-:::
-
-All stakeholders should understand which data are exchanged with the
-environment of the system.
-
-::: formalpara-title
-**Form**
-:::
-
-All kinds of diagrams that show the system as a black box and specify
-the domain interfaces to communication partners.
-
-Alternatively (or additionally) you can use a table. The title of the
-table is the name of your system, the three columns contain the name of
-the communication partner, the inputs, and the outputs.
-
-**\<Diagram or Table>**
-
-**\<optionally: Explanation of external domain interfaces>**
-
-## Technical Context {#_technical_context}
-
-::: formalpara-title
-**Contents**
-:::
-
-Technical interfaces (channels and transmission media) linking your
-system to its environment. In addition a mapping of domain specific
-input/output to the channels, i.e. an explanation which I/O uses which
-channel.
-
-::: formalpara-title
-**Motivation**
-:::
-
-Many stakeholders make architectural decision based on the technical
-interfaces between the system and its context. Especially infrastructure
-or hardware designers decide these technical interfaces.
-
-::: formalpara-title
-**Form**
-:::
-
-E.g. UML deployment diagram describing channels to neighboring systems,
-together with a mapping table showing the relationships between channels
-and input/output.
-
-**\<Diagram or Table>**
-
-**\<optionally: Explanation of technical interfaces>**
-
-**\<Mapping Input/Output to Channels>**
 
 # Chapter 4: Solution Strategy
 
