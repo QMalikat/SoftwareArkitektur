@@ -1,5 +1,10 @@
+# Table of contents
+
+
+
+
 # Introduction and Goals
-Systemet er en mobilapplikation målrettet studerende, der ønsker hurtigt og nemt at finde drikkesteder. Applikationen giver et overskueligt overblik over lokationer via kort- eller listevisning, og tilbyder informationer såsom rating, prisleje, antal venner til stede samt mulighed for at vælge rutevejledning via maps.
+Systemet er en mobilapplikation, der henvender sig til studerende med behov for hurtigt og nemt at identificere relevante drikkesteder. Applikationen præsenterer et overskueligt overblik over lokationer i både kort- og listevisning og tilbyder desuden informationer om blandt andet brugerrating, prisniveau, antal tilstedeværende studiekammerater samt muligheden for at generere rutevejledning via korttjenester.
 
 ## Requirements Overview
 | ID | User stories | Requirements |
@@ -18,20 +23,18 @@ Se funktionelle krav gennem user stories. (USandFK.md)
 
 
 
-## Quality Goals {#_quality_goals}
-
-
+## Quality Goals
 ![Categories of Quality
 Requirements](images/1_QualityGoals.png)
 
 ::: formalpara-title
 **Motivation**
-:::
+| Interessent         | Kvalitetsmål                                                                 |
+|---------------------|-------------------------------------------------------------------------------|
+| **Studerende**      | - Skal kunne finde drikkesteder og rutevejledning første gang uden introduktion.<br>- Lokationsoversigt skal indlæses på under 2 sekunder.<br>- Venne-funktion skal fungere stabilt og pålideligt.<br>- Deling af lokation/persondata skal altid være frivillig og let at slå fra. |
+| **Uddannelsesinstitution** | - Appen skal understøtte sociale relationer og reducere frafald.<br>- Privatliv og sikkerhed skal være garanteret for at beskytte institutionens omdømme. |
+| **Lokationsejere**  | - Information om lokationer skal være korrekt og nem at opdatere. |
 
-You should know the quality goals of your most important stakeholders,
-since they will influence fundamental architectural decisions. Make sure
-to be very concrete about these qualities, avoid buzzwords. If you as an
-architect do not know how the quality of your work will be judged...
 
 ::: formalpara-title
 **Form**
