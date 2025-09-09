@@ -4,10 +4,16 @@
 3. [Chapter 3: Context and Scope](#chapter-3-Context-and-Scope)
 4. [Chapter 4: Solution Strategy](#chapter-4-Solution-Strategy)
 5. [Chapter 5: Building Block View](#chapter-5-building-block-view)
+6. [Chapter 6: Runtime View](#chapter-6-runtime-view)
+7. [Chapter 7: Deployment View](#chapter-7-deployment-view)
+8. [Chapter 8: Cross-cutting Concepts](#chapter-8-cross-cutting-concepts)
+9. [Chapter 9: Architecture Decisions](#chapter-9-architecture-decisions)
+10. [Chapter 10: Quality Requirements](#chapter-10-quality-requirements)
+11. [Chapter 11: Risks and Technical Debts](#chapter-11-risks-and-technical-debts)
+12. [Chapter 12: Glossary](#chapter-12-glossary)
 
 
-
-#Chapter 1: Introduction and Goals
+# Chapter 1: Introduction and Goals
 Systemet er en mobilapplikation, der henvender sig til studerende med det formål at fremme sociale interaktioner. Applikationen præsenterer både kort- og listevisning af nærliggende lokationer og giver yderligere information om prisniveau, antal tilstedeværende studiekammerater, brugervurdering samt rutevejledning. Den er designet til at styrke det sociale liv blandt studerende, øge trivsel og reducere frafald fra uddannelserne.
 
 ## Requirements Overview
@@ -69,7 +75,7 @@ Requirements](images/1_QualityGoals.png)
 
 
 
-# Chapter 2: Architecture Constraints {#section-architecture-constraints}
+# Chapter 2: Architecture Constraints
 
 ::: formalpara-title
 **Contents**
@@ -100,7 +106,7 @@ documentation or naming conventions)
 See [Architecture Constraints](https://docs.arc42.org/section-2/) in the
 arc42 documentation.
 
-#Chapter 3: Context and Scope
+# Chapter 3: Context and Scope
 
 ::: formalpara-title
 **Contents**
@@ -201,7 +207,7 @@ and input/output.
 
 **\<Mapping Input/Output to Channels>**
 
-#Chapter 4: Solution Strategy
+# Chapter 4: Solution Strategy
 
 ::: formalpara-title
 **Contents**
@@ -241,7 +247,7 @@ in the following sections.
 See [Solution Strategy](https://docs.arc42.org/section-4/) in the arc42
 documentation.
 
-#Chapter 5: Building Block View {#section-building-block-view}
+# Chapter 5: Building Block View {#section-building-block-view}
 
 ::: formalpara-title
 **Content**
@@ -444,7 +450,7 @@ Specifies the internal structure of *building block x.1*.
 
 *\<white box template>*
 
-#Chapter 6: Runtime View {#section-runtime-view}
+# Chapter 6: Runtime View
 
 ::: formalpara-title
 **Contents**
@@ -512,7 +518,7 @@ documentation.
 
 ## \<Runtime Scenario n> {#__runtime_scenario_n}
 
-#Chapter 7: Deployment View {#section-deployment-view}
+# Chapter 7: Deployment View 
 
 ::: formalpara-title
 **Content**
@@ -619,7 +625,7 @@ Please copy the structure from level 1 for each selected element.
 
 *\<diagram + explanation>*
 
-#Chapter 8: Cross-cutting Concepts {#section-concepts}
+# Chapter 8: Cross-cutting Concepts
 
 ::: formalpara-title
 **Content**
@@ -711,7 +717,7 @@ documentation.
 
 *\<explanation>*
 
-#Chapter 9: Architecture Decisions {#section-design-decisions}
+# Chapter 9: Architecture Decisions
 
 ::: formalpara-title
 **Contents**
@@ -753,7 +759,7 @@ Various options:
 See [Architecture Decisions](https://docs.arc42.org/section-9/) in the
 arc42 documentation. There you will find links and examples about ADR.
 
-#Chapter 10: Quality Requirements {#section-quality-scenarios}
+#Chapter 10: Quality Requirements
 
 ::: formalpara-title
 **Content**
@@ -850,7 +856,7 @@ evaluated.
 
 Tabular or free form text.
 
-#Chapter 11: Risks and Technical Debts {#section-technical-risks}
+# Chapter 11: Risks and Technical Debts 
 
 ::: formalpara-title
 **Contents**
@@ -881,7 +887,7 @@ measures to minimize, mitigate or avoid risks or reduce technical debts.
 See [Risks and Technical Debt](https://docs.arc42.org/section-11/) in
 the arc42 documentation.
 
-#Chapter 12: Glossary {#section-glossary}
+# Chapter 12: Glossary
 
 ::: formalpara-title
 **Contents**
