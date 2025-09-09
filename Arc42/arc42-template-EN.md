@@ -699,7 +699,7 @@ Derudover indeholder kapitlet kvalitetskrav med lavere prioritet, som er “nice
 | Kategori                 | Underkategori                           | Prioritet | Relaterede scenarier / Noter |
 |--------------------------|-----------------------------------------|-----------|------------------------------|
 | **Brugervenlighed**      | Intuitiv navigation                     | Høj       | QS1, QS2                     |
-|                          | Hurtig onboarding                       | Høj       | QS3                          |
+|                          | Hurtig kontooprettelse                  | Mellem    | QS3                          |
 |                          | Klar informationsvisning                | Mellem    | QS4                          |
 | **Tilgængelighed**       | Fungerer på forskellige enheder         | Høj       | QS15                         |
 |                          | Offline visning af visse data           | Lav       | QS17 (nice-to-have)          |
@@ -710,7 +710,7 @@ Derudover indeholder kapitlet kvalitetskrav med lavere prioritet, som er “nice
 | **Privatliv**            | Beskyttelse af brugerdata               | Høj       | QS10, QS11                   |
 |                          | Valgfri deling af lokation              | Høj       | QS12                         |
 | **Sikkerhed**            | Kryptering af følsomme data             | Høj       | QS10                         |
-|                          | Adgangskontrol og autentificering       | Høj       | QS18 (nice-to-have)          |
+|                          | Adgangskontrol og autentificering       | Lav       | QS18 (nice-to-have)          |
 
 > Bemærk: Underkategorier som QS17 og QS18 er eksempler på mindre prioriterede krav (“nice-to-have”) og skaber ikke høj risiko, hvis de ikke implementeres fuldt ud.
 
@@ -719,20 +719,20 @@ Derudover indeholder kapitlet kvalitetskrav med lavere prioritet, som er “nice
 | Scenarie ID | Type       | Stimulus / Begivenhed                   | Forventet systemadfærd / Respons                     | Relateret krav / User Story | Prioritet |
 |------------|------------|----------------------------------------|--------------------------------------------------------|-----------------------------|-----------|
 | QS1        | Brug       | Bruger åbner appen første gang          | Onboarding gennemføres inden for 10 sekunder          | US1, F1                     | Høj       |
-| QS2        | Brug       | Bruger navigerer gennem lokationsliste  | UI indlæser ny side inden for 1 sekund                | US1, F2                     | Høj       |
+| QS2        | Brug       | Bruger navigerer gennem lokationsliste  | UI indlæser ny side inden for 2 sekunder              | US1, F2                     | Høj       |
 | QS3        | Brug       | Ny bruger tilmelder sig                 | Registrering gennemføres uden fejl                    | US1, F1                     | Høj       |
 | QS4        | Brug       | Bruger ser pris- og ratinginfo          | Data vises korrekt og tydeligt                        | US3, US5                    | Mellem    |
 | QS5        | Brug       | App indlæser kort/liste over lokationer | Liste/kort fuldt indlæst inden for 2 sekunder         | US1, F1                     | Høj       |
-| QS6        | Brug       | Flere brugere forespørger ruter         | System svarer uden mærkbar forsinkelse                | US2, F3                     | Høj       |
-| QS7        | Brug       | Bruger anmoder om venners realtidsplacering | Opdateret placering vises inden for 5 sekunder    | US4, F7                     | Høj       |
+| QS6        | Brug       | Flere brugere forespørger ruter         | System svarer uden mærkbar forsinkelse                | US2, F3                     | Mellem    |
+| QS7        | Brug       | Bruger anmoder om venners realtidsplacering | Opdateret placering vises inden for 5 sekunder    | US4, F7                     | Mellem    |
 | QS8        | Ændring    | Backend service opdateres / går ned     | System gendanner automatisk; datakonsistens opretholdes | F7, F8                    | Høj       |
-| QS9        | Ændring    | Netværksforbindelse mistes under brug   | System håndterer fejlen og prøver igen automatisk     | F7, F8                      | Mellem    |
+| QS9        | Ændring    | Netværksforbindelse mistes under brug   | System håndterer fejlen og prøver igen automatisk     | F7, F8                      | Lav       |
 | QS10       | Brug       | Bruger indsender personlige data        | Data gemmes sikkert med kryptering                    | US4, F8                     | Høj       |
 | QS11       | Brug       | Admin tilgår brugeranalyser             | Kun anonymiserede data tilgængelige                   | F7, F8                      | Høj       |
 | QS12       | Brug       | Bruger slår lokationsdeling til/fra     | Lokationsdeling aktiveres/deaktiveres straks          | US4, F8                     | Høj       |
 | QS15       | Brug       | App åbnes på forskellige enheder        | Layout og funktionalitet tilpasses korrekt            | F1, F2                      | Mellem    |
 | QS17       | Brug       | Bruger forsøger offline adgang          | Begrænset data vises uden netværk                     | Nice-to-have                | Lav       |
-| QS18       | Ændring    | Admin opretter ny adgangsrolle         | Adgangskontrol implementeres korrekt                   | Nice-to-have                | Lav       |
+| QS18       | Ændring    | Admin opretter ny adgangsrolle          | Adgangskontrol implementeres korrekt                  | Nice-to-have                | Lav       |
 
 
 # Chapter 11: Risks and Technical Debts 
