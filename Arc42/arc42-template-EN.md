@@ -1,68 +1,22 @@
-# 
+# Introduction and Goals
+Systemet er en mobilapplikation målrettet studerende, der ønsker hurtigt og nemt at finde drikkesteder. Applikationen giver et overskueligt overblik over lokationer via kort- eller listevisning, og tilbyder informationer såsom rating, prisleje, antal venner til stede samt mulighed for at vælge rutevejledning via maps.
 
-**About arc42**
+## Requirements Overview
+| ID | User stories | Requirements |
+| --- | -------- | ------- |
+| US1 | Som studerende ønsker jeg en oversigt over alle lokationer der serverer alkohol, for at have et nemt overblik. | Applikationen skal vise en liste eller et kort med tilgængelige lokationer. |
+| US2 | Som studerende vil jeg kunne vælge rute via maps, så jeg hurtigere kan finde vej. | Applikationen skal understøtte integration med korttjenester for at vise vej. |
+| US3 | Som studerende ønsker jeg et anslået prisleje på hver location, så jeg kan vælge ud fra min saldo. | Applikationen skal fremvise et prisestimat ved hver location. |
+| US4 | Som studerende vil jeg kunne se hvor mine venner er, så vi nemmere kan finde hinanden. | Applikationen skal understøtte visning af venners tilstedeværelse på lokationer. |
+| US5 | Som studerende vil jeg kunne give hver location en rating, så jeg nemmere kan sorterer i mulighederne. |  Brugere skal kunne vurdere og bedømme lokationer. |
 
-arc42, the template for documentation of software and system
-architecture.
+**Motivation** <br>
+Applikationen er designet til at understøtte det sociale liv blandt studerende med henblik på at reducere frafald. Den tilbyder et værktøj, hvor studerende kan få overblik over prisvenlige muligheder for forplejning. Formålet er at fremme sociale relationer og dermed øge både trivsel og fastholdelse på studiet.
 
-Template Version 8.2 EN. (based upon AsciiDoc version), January 2023
+**Form** <br>
+Se funktionelle krav gennem user stories. (USandFK.md)
 
-Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
-contributors. See <https://arc42.org>.
 
-::: note
-This version of the template contains some help and explanations. It is
-used for familiarization with arc42 and the understanding of the
-concepts. For documentation of your own system you use better the
-*plain* version.
-:::
-
-# Introduction and Goals {#section-introduction-and-goals}
-
-Describes the relevant requirements and the driving forces that software
-architects and development team must consider. These include
-
--   underlying business goals,
-
--   essential features,
-
--   essential functional requirements,
-
--   quality goals for the architecture and
-
--   relevant stakeholders and their expectations
-
-## Requirements Overview {#_requirements_overview}
-
-::: formalpara-title
-**Contents**
-:::
-
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
-
-::: formalpara-title
-**Motivation**
-:::
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-::: formalpara-title
-**Form**
-:::
-
-Short textual description, probably in tabular use-case format. If
-requirements documents exist this overview should refer to these
-documents.
-
-Keep these excerpts as short as possible. Balance readability of this
-document with potential redundancy w.r.t to requirements documents.
-
-See [Introduction and Goals](https://docs.arc42.org/section-1/) in the
-arc42 documentation.
 
 ## Quality Goals {#_quality_goals}
 
