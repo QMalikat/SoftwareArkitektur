@@ -134,7 +134,7 @@ Forklaring:
 ## Technical Context
 Systemet kommunikerer med både interne og eksterne tekniske systemer. Dette inkluderer mobile enheder, servere, databaser og tredjeparts-API’er. Den tekniske kontekst beskriver både kanaler og protokoller.
 
-![Techinal Context Diagram](images/3_TechinalDiagram.png)
+![Techinal Context Diagram](images/3_TechnicalDiagram.png)
 
 
 
