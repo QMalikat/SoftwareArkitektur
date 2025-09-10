@@ -40,7 +40,7 @@ Requirements](images/1_QualityGoals.png)
 | Interessent         | Kvalitetsmål                                                                 |
 |---------------------|-------------------------------------------------------------------------------|
 | **Uddannelsesinstitution** | - Appen skal understøtte sociale relationer og reducere frafald.<br>- Privatliv og sikkerhed skal være garanteret for at beskytte institutionens omdømme. |
-| **Lokationsejere**  | - Information om lokationer skal være korrekt og nem at opdatere. |
+| **Lokationsejere**  | - Information om lokationer skal være korrekt og nem at opdatere. <br> Mulighed for at indsætte tilbud /reklamer for at tiltrække flere kunder|
 | **Studerende**      | - Skal kunne finde lokationer og rutevejledning første gang uden introduktion.<br>- Lokationsoversigt skal indlæses på under 2 sekunder.<br>- Venne-funktion skal fungere stabilt og pålideligt.<br>- Deling af lokation/persondata skal altid være frivillig og let at slå fra. |
 
 **Funktionelt krav og kvalitetsmål**
@@ -109,20 +109,20 @@ arc42 documentation.
 # Chapter 3: Context and Scope
 
 ## Business Context
-Systemet, Unibar locator, er en mobilapplikation, der forbinder studerende med nærliggende lokationer og medstuderende for at fremme sociale interaktioner. Systemet fungerer som en “black box” mellem brugere, lokationsejere og institutioner, hvor det modtager forespørgsler, processerer data og leverer relevant information.
+Systemet, Unibar locator, er en mobilapplikation, der forbinder studerende med nærliggende lokationer og medstuderende for at fremme sociale interaktioner. Systemet opretter dermed en forbindelse mellem lokationsejere og studerende, hvor studernede er tilknyttet en uddannelsesinstutioner. Applikationen modtager forespørgsler, processerer data og leverer relevant information.
 
 ### Business Context Diagram
 ![Business Context Diagram](images/3_BuisnessDiagram.png)
 
 ### Domain Interfaces Table
 
-| Communication Partner        | Inputs from Partner                                      | Outputs to Partner                                                                 |
-|-------------------------------|----------------------------------------------------------|----------------------------------------------------------------------------------|
-| Studerende                    | Søgeforespørgsler, rutevalg, rating, venneplacering     | Liste/kort med lokationer, rutevejledning, venners placering, prisestimat, ratings |
-| Lokationsejere                | Opdatering af lokationsinformation (åbningstid, priser)  | Bekræftelse af opdatering, statistik over besøg                                    |
-| Uddannelsesinstitution        | Ingen direkte input                                      | Anonymiseret data om deltagelse, sociale mønstre                                   |
-| Eksterne tjenester (Maps API) | Lokationsforespørgsler, ruteforespørgsler               | Kortdata, ruter, afstande, estimeret tid                                          |
-| Notifikationstjenester        | Meddelelser til brugere                                  | Push-notifikationer                                                               |
+| Communication Partner        | Inputs from Partner                                      | Outputs to Partner      |
+|------------------------------|---------------------------------------------------------|-------------------------|
+| Studerende                   | Søgeforespørgsler, rutevalg, rating, venneplacering     | Liste/kort med lokationer, rutevejledning, venners placering, prisestimat, ratings |
+| Lokationsejere               | Opdatering af information (åbningstid, priser, tilbud)  | Bekræftelse af opdatering, statistik over besøg      |
+| Uddannelsesinstitution       | Ingen direkte input                                     | Anonymiseret data om deltagelse, sociale mønstre     |
+| Eksterne tjenester (Maps API)| Lokationsforespørgsler, ruteforespørgsler               | Kortdata, ruter, afstande, estimeret tid             |
+| Notifikationstjenester       | Meddelelser til brugere                                 | Push-notifikationer                                  |
 
 
 Forklaring:
