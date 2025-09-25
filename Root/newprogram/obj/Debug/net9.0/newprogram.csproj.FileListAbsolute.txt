@@ -1,0 +1,5 @@
+C:\Users\hoeln\Documents\Github Repo\SoftwareArkitektur\newprogram\obj\Debug\net9.0\newprogram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hoeln\Documents\Github Repo\SoftwareArkitektur\newprogram\obj\Debug\net9.0\newprogram.AssemblyInfoInputs.cache
+C:\Users\hoeln\Documents\Github Repo\SoftwareArkitektur\newprogram\obj\Debug\net9.0\newprogram.AssemblyInfo.cs
+C:\Users\hoeln\Documents\Github Repo\SoftwareArkitektur\newprogram\obj\Debug\net9.0\newprogram.csproj.CoreCompileInputs.cache
+C:\Users\hoeln\Documents\Github Repo\SoftwareArkitektur\newprogram\obj\Debug\net9.0\newprogram.sourcelink.json
