@@ -154,7 +154,7 @@ Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrug
 ![Overview diagram](images/1_Overviewdiagram.png)
 
 
-### Contained Building Blocks (Level 1)
+## Level 1 - Contained Building Blocks
 
 | Name                   | Responsibility |
 |------------------------|----------------|
@@ -169,25 +169,25 @@ Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrug
 | Interface               | Description |
 |-------------------------|------------|
 | REST API                | Kommunikerer mellem mobilklient og backend; håndterer CRUD-operationer for lokationer, ratings og brugere. |
-| Maps SDK                | Mobilklienten bruger Maps SDK til kortvisning og rutevejledning. |
+| Maps                    | Mobilklienten bruger Maps til kortvisning og rutevejledning. |
 | Push Notification API   | Backend sender realtidsopdateringer til brugernes mobilklienter. |
 
 ## Level 2 – Internal Structure of Key Building Blocks
 
 ### White Box *Mobilklient*
 
-- **Purpose/Responsibility:** Præsenterer lokationer via kort- og listevisning, håndterer brugerinput, viser venners placering og ratings.  
-- **Interfaces:** REST API til backend, Maps SDK, Push Notification API.  
-- **Quality/Performance:** Skal være responsiv (<200ms for kortvisning), understøtte offline caching af lokationer.  
-- **Directory/File Location:** /src/mobile  
+- **Purpose & Responsibility:** Præsenterer lokationer via kort- og listevisning, håndterer brugerinput, viser venners placering og ratings.  
+- **Interfaces:** REST API til backend, Maps, Push Notification API.  
+- **Quality & Performance:** Skal være responsiv, understøtte offline caching af lokationer.  
+- **Directory & File Location:** /app/mobile  
 - **Fulfilled Requirements:** US1, US2, US3, US4, US5; kvalitetsmål F1-F12.
 
 ### White Box *Backend API*
 
 - **Purpose/Responsibility:** Behandler forespørgsler fra klienter, autentificerer brugere, styrer sessionsdata og realtidsdata.  
 - **Interfaces:** REST API, Database connection, Notification Service.  
-- **Quality/Performance:** Høj tilgængelighed (>99%), lav responstid (<100ms per request).  
-- **Directory/File Location:** /src/backend  
+- **Quality/Performance:** Høj tilgængelighed, lav responstid.  
+- **Directory/File Location:** /app/backend  
 - **Fulfilled Requirements:** US1-US5; kvalitetsmål F3, F4, F7, F12.
 
 ### White Box *Database*
@@ -201,7 +201,7 @@ Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrug
 ### White Box *Maps Integration*
 
 - **Purpose/Responsibility:** Tilbyder kortdata, rutevejledning og afstandsberegning.  
-- **Interfaces:** Maps SDK til mobilklient.  
+- **Interfaces:** Maps til mobilklient.  
 - **Fulfilled Requirements:** US2; kvalitetsmål F3, F4.
 
 ### White Box *Notification Service*
@@ -211,19 +211,8 @@ Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrug
 - **Quality/Performance:** Realtidsopdateringer med høj pålidelighed.  
 - **Fulfilled Requirements:** US4; kvalitetsmål F7, F8.
 
-## Level 3 – Internal Structure of Mobilklient (Example)
+## Level 3 – Internal Structure of Mobilklient 
 
-### White Box *UI Layer*
-
-- Håndterer visning af kort og liste, brugervalg, ratings og filtrering.
-
-### White Box *Data Layer*
-
-- Cacher lokationsdata, brugersessioner og venners placering lokalt.
-
-### White Box *Service Layer*
-
-- Kommunikerer med Backend API, Maps SDK og Notification Service.
 
 
 
