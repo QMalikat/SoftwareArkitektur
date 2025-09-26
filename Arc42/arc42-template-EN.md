@@ -77,34 +77,21 @@ Requirements](images/1_QualityGoals.png)
 
 # Chapter 2: Architecture Constraints
 
-::: formalpara-title
-**Contents**
-:::
+##Motivation
+For at sikre, at udviklingen af Unibar Locator følger både tekniske og organisatoriske krav, er det vigtigt at identificere de begrænsninger, som arkitekten og udviklingsteamet skal tage hensyn til. 
+Constraints hjælper med at afklare, hvor der er frihed i designvalg, og hvor specifikke beslutninger er påkrævet. 
 
-Any requirement that constraints software architects in their freedom of
-design and implementation decisions or decision about the development
-process. These constraints sometimes go beyond individual systems and
-are valid for whole organizations and companies.
+**Constraints**
+| ID | Type     | Beskrivelse                                                                                           |  US | Kommentar                                                   |
+|----|----------|-------------------------------------------------------------------------------------------------------|-----|-------------------------------------------------------------|
+| C1 | Teknisk  | Applikationen skal understøtte integration med korttjenester for rutevejledning.                      | US2 | Påvirker valg af SDK’er, API’er og dataformat.              |
+| C2 | Teknisk  | Applikationen skal kunne vise både liste- og kortvisning af lokationer.                               | US1 | Kræver fleksibel UI-arkitektur og passende datamodel.       |
+| C3 | Teknisk  | Applikationen skal vise anslået prisleje for hver lokation.                                           | US3 | Kræver standardisering af prisdata og mulig lokal lagring.  |
+| C4 | Teknisk  | Applikationen skal kunne vise venners tilstedeværelse på lokationer.                                  | US4 | Kræver realtidsdatahåndtering og brugergodkendelse.         |
+| C5 | Teknisk  | Brugere skal kunne bedømme og give rating til lokationer.                                             | US5 | Kræver database-understøttelse for ratings og feedback.     |
+| C6 | Organisatorisk | Udviklingen skal følge virksomhedens programmeringsstandarder                                   | Alle | Sikrer konsistens i kodebase og integration med backend.   |
+| C7 | Organisatorisk | Projektet skal følge gældende GDPR-regler ved håndtering af brugerdata.                         | US4, US5 | Påvirker design af autentifikation, anonymisering og datalagring. |
 
-::: formalpara-title
-**Motivation**
-:::
-
-Architects should know exactly where they are free in their design
-decisions and where they must adhere to constraints. Constraints must
-always be dealt with; they may be negotiable, though.
-
-::: formalpara-title
-**Form**
-:::
-
-Simple tables of constraints with explanations. If needed you can
-subdivide them into technical constraints, organizational and political
-constraints and conventions (e.g. programming or versioning guidelines,
-documentation or naming conventions)
-
-See [Architecture Constraints](https://docs.arc42.org/section-2/) in the
-arc42 documentation.
 
 # Chapter 3: Context and Scope
 
