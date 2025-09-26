@@ -1,0 +1,14 @@
+C:\Users\Nina\Desktop\Root\src\bin\Debug\net8.0\newprogram.exe
+C:\Users\Nina\Desktop\Root\src\bin\Debug\net8.0\newprogram.deps.json
+C:\Users\Nina\Desktop\Root\src\bin\Debug\net8.0\newprogram.runtimeconfig.json
+C:\Users\Nina\Desktop\Root\src\bin\Debug\net8.0\newprogram.dll
+C:\Users\Nina\Desktop\Root\src\bin\Debug\net8.0\newprogram.pdb
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.AssemblyInfoInputs.cache
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.AssemblyInfo.cs
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.csproj.CoreCompileInputs.cache
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.dll
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\refint\newprogram.dll
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.pdb
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\newprogram.genruntimeconfig.cache
+C:\Users\Nina\Desktop\Root\src\obj\Debug\net8.0\ref\newprogram.dll

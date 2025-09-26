@@ -1,19 +1,21 @@
-﻿namespace test;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-[TestClass]
-public sealed class Test1
+namespace test
 {
-    [TestMethod]
-    public void TestMethod1()
+    [TestClass]
+    public sealed class Test1
     {
-        // Arrange
-        User QM = new User();
+        [TestMethod]
+        public void TestMethod1()
+        {
+            // Arrange
+            User QM = new User();
 
-        // Act
-        QM.name = "Nina";
+            // Act
+            QM.Name = "Nina";
 
-        // Asset
-        Assert.isTrue(QM.name, "Nina");
+            // Assert
+            Assert.IsTrue(QM.Name == "Nina");
+        }
     }
-
 }
