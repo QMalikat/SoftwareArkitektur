@@ -76,8 +76,6 @@ Requirements](images/1_QualityGoals.png)
 
 
 # Chapter 2: Architecture Constraints
-
-##Motivation
 For at sikre, at udviklingen af Unibar Locator følger både tekniske og organisatoriske krav, er det vigtigt at identificere de begrænsninger, som arkitekten og udviklingsteamet skal tage hensyn til. 
 Constraints hjælper med at afklare, hvor der er frihed i designvalg, og hvor specifikke beslutninger er påkrævet. 
 
@@ -126,44 +124,26 @@ Systemet kommunikerer med både interne og eksterne tekniske systemer. Dette ink
 
 
 # Chapter 4: Solution Strategy
+De arkitektoniske beslutninger udgør fundamentet for Unibar Locators systemarkitektur. Valgene her lægger grundlaget for, hvordan systemet struktureres, hvilke teknologier der anvendes, og hvordan kvalitetsmål som brugervenlighed, performance og datasikkerhed opnås. Beslutningerne er truffet med udgangspunkt i problemstillingen, user stories, constraints og ønskede kvalitetsmål.
 
-::: formalpara-title
-**Contents**
-:::
+## 4.2 Arkitektoniske beslutninger
 
-A short summary and explanation of the fundamental decisions and
-solution strategies, that shape system architecture. It includes
+| Beslutning                                  | Type           | Kvalitetsmål                     | Motivation                                                      |
+|---------------------------------------------|----------------|----------------------------------|-----------------------------------------------------------------|
+| Brug af mobilapplikation (iOS og Android)   | Teknologi      | Brugervenlighed, Tilgængelighed  | Sikre bred tilgængelighed og udnytte funktioner som GPS og push-notifikationer. |
+| Integration med tredjeparts korttjeneste    | Teknologi      | Brugervenlighed, Tilgængelighed  | Tilbyde rutevejledning og kortvisning (F1, F3, F4) uden at skulle udvikle egen løsning. |
+| Client-Server arkitektur                    | Arkitektur     | Pålidelighed, Ydelse             | Appen opdeles i frontend og backend for skalerbarhed og realtidsopdateringer (F7). |
+| Backend: C# og MySQL                        | Teknologi      | Pålidelighed, Ydelse             | C# anvendes for at følge interne standarder; MySQL til datalagring (F3, F5, F7, F12). |
+| UI/UX design med liste- og kortvisning      | Arkitektur     | Brugervenlighed, Ydelse          | Opfylder user stories om nem oversigt over lokationer (US1, US2) og fleksibel navigation (F1, F2, F6, F9, F11). |
+| Realtidsfunktionalitet til venners lokation | Kvalitet       | Pålidelighed, Privatliv          | Implementeres med push-notifikationer og periodisk opdatering (F7), samtidig med at GDPR overholdes (F8). |
+| Ratings og feedback på lokationer           | Funktionalitet | Brugervenlighed, Pålidelighed    | Brugere kan bedømme lokationer (F9, F10, F11, F12), hvilket understøtter sociale beslutninger og sortering. |
+| Udviklingsproces: Scrum                     | Organisatorisk | Brugervenlighed, Pålidelighed    | Iterativ udvikling og hurtig feedback sikrer, at kvalitetsmål opnås løbende. |
+| Overholdelse af GDPR                        | Organisatorisk / Teknologi | Privatliv, Sikkerhed | Alle brugerdata håndteres med samtykke og anonymisering, hvilket sikrer brugertrivsel (F7, F8). |
 
--   technology decisions
-
--   decisions about the top-level decomposition of the system, e.g.
-    usage of an architectural pattern or design pattern
-
--   decisions on how to achieve key quality goals
-
--   relevant organizational decisions, e.g. selecting a development
-    process or delegating certain tasks to third parties.
-
-::: formalpara-title
-**Motivation**
-:::
-
-These decisions form the cornerstones for your architecture. They are
-the foundation for many other detailed decisions or implementation
-rules.
-
-::: formalpara-title
-**Form**
-:::
-
-Keep the explanations of such key decisions short.
-
-Motivate what was decided and why it was decided that way, based upon
-problem statement, quality goals and key constraints. Refer to details
-in the following sections.
-
-See [Solution Strategy](https://docs.arc42.org/section-4/) in the arc42
-documentation.
+** 4.3 Kommentarer **
+- Beslutningerne balancerer tekniske muligheder, organisatoriske krav og lovgivningsmæssige begrænsninger.  
+- Tabellen viser, hvordan arkitekturen understøtter de vigtigste kvalitetsmål og user stories.  
+- Dette fundament bruges i de følgende kapitler til at designe komponentstruktur, datamodel og sikkerhedsløsninger.
 
 # Chapter 5: Building Block View {#section-building-block-view}
 
