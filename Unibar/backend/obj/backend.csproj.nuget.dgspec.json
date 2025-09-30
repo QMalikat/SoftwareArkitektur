@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Login\\backend\\backend.csproj": {}
+    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Login\\backend\\backend.csproj": {
+    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Login\\backend\\backend.csproj",
+        "projectUniqueName": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Login\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\hoeln\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Login\\backend\\obj\\",
+        "projectPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Nina\\.nuget\\packages\\",
+        "outputPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hoeln\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nina\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -44,13 +44,51 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[9.3.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[8.1.1, )"
             }
           },
           "imports": [
@@ -72,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

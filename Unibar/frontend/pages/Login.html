@@ -2,7 +2,7 @@
 <html lang=”en”>
 <head>
 	<meta charset=”UTF-8”>
-	<meta name=”viewport” content=”width-device-width, initial-scale=1.0”>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/Style.css">
     <link rel="stylesheet" type="text/css" href="../css/Login.css">
 	<title>LoginPage</title>
@@ -21,8 +21,9 @@
                 <p id="data">Brug Github konto for at logge ind</p>
             </article>
             <article class="login-form">
-                <input type="text" id="username" placeholder="Enter username">
-                <button id="submit" onclick="update()" class="login-button">Submit</button>
+                <input type="email" id="email" placeholder="Enter email">
+                <input type="password" id="password" placeholder="Enter password">
+                <button id="submit" onclick="login()" class="login-button">Submit</button>
             </article>
         </section>
     </main>

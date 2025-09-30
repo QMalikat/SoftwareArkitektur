@@ -10,52 +10,47 @@ using System.Text;
 namespace Backend.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public AuthController(ApplicationDbContext context)
+        public AuthController(ApplicationDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
-        // POST /auth/login
+        // POST /api/auth/login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.email == loginRequest.email);
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Email == loginRequest.Email);
 
             if (user == null)
-            {
                 return Unauthorized(new { message = "Wrong email or password." });
-            }
 
-            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginRequest.password, user.password_hash);
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.PasswordHash);
 
             if (!isPasswordValid)
-            {
                 return Unauthorized(new { message = "Wrong email or password." });
-            }
 
-            // Hvis password matcher
-
+            // Generér JWT
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes("SuperhemmeligJWTKeyTilPBIGRP1SomSkalværeLængereEnd32Tegn");
+            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim("id", user.id.ToString()),
-                    new Claim("username", user.username),
-                    new Claim("email", user.email),
-                    new Claim("user_type", user.user_type.ToString())
+                    new Claim("id", user.Id.ToString()),
+                    new Claim("email", user.Email),
+                    new Claim("user_type", user.UserType)
                 }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
