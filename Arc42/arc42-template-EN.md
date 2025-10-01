@@ -27,7 +27,7 @@ Unibar Locator er en mobilapplikation, der henvender sig til studerende med det 
 
 
 **Form** <br>
-Se funktionelle krav gennem user stories. [a relative link](FK.md)
+Link til [FURPS+](FK.md)
 
 
 
