@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {}
+    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {}
   },
   "projects": {
-    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {
+    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\Nina\\.nuget\\packages\\",
-        "outputPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\obj\\",
+        "projectPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\hoeln\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Nina\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hoeln\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -54,21 +54,21 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.2, )"
+              "version": "[9.0.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.8, )"
             },
             "MySql.Data": {
               "target": "Package",
@@ -110,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
