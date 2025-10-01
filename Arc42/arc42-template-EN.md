@@ -155,6 +155,11 @@ Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrug
 
 
 ## Level 1 - Contained Building Blocks
+Building blocks notes
+Aktivitets diagram niveau 1
+Use case niveau 2
+Sekvens  niveau 3
+Klasse diagram niveau 4
 
 | Name                   | Responsibility |
 |------------------------|----------------|
