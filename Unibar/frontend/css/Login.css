@@ -7,7 +7,7 @@
     margin: 0 auto;
     padding: 40px;
     max-width: 400px;
-    background-color: #637090;  /* Matcher dit table design */
+    background-color: #5185A6; 
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -43,7 +43,7 @@
     height: 40px;
     border-radius: 20px;
     padding: 0 24px;
-    background-color: #9bd8fe;
+    background-color: #A9C5DB; /* Rosa #926370 */
     color: white;
     font-size: 18px;
     border: none;
@@ -52,5 +52,5 @@
 }
 
 .login-button:hover {
-    background-color: #e2cd98;
+    background-color: #dbbfa9;
 }
