@@ -25,17 +25,14 @@ Unibar Locator er en mobilapplikation, der henvender sig til studerende med det 
 | US4 | Som studerende vil jeg kunne se hvor mine venner er, så vi nemmere kan finde hinanden. | Applikationen skal understøtte visning af venners tilstedeværelse på lokationer. |
 | US5 | Som studerende vil jeg kunne give hver location en rating, så jeg nemmere kan sorterer i mulighederne. |  Brugere skal kunne vurdere og bedømme lokationer. |
 
-
-**Funktionelle krav** <br>
+### Funktionelle krav <br>
 Link til [FURPS+](FK.md)
-
-
 
 ## Quality Goals
 ![Categories of Quality
 Requirements](images/1_QualityGoals.png)
 
-**Funktionelt krav og kvalitetsmål**
+### Funktionelt krav og kvalitetsmål
 | Funktionelt krav | Relateret kvalitetsmål |
 |------------------|-------------------------|
 | F1 – Kort med nærliggende lokationer | Brugervenlighed, Ydelse |
@@ -132,7 +129,7 @@ De arkitektoniske beslutninger udgør fundamentet for Unibar Locators systemarki
 | Udviklingsproces: Scrum                     | Organisatorisk | Brugervenlighed, Pålidelighed    | Iterativ udvikling og hurtig feedback sikrer, at kvalitetsmål opnås løbende. |
 | Overholdelse af GDPR                        | Organisatorisk / Teknologi | Privatliv, Sikkerhed | Alle brugerdata håndteres med samtykke og anonymisering, hvilket sikrer brugertrivsel (F7, F8). |
 
-**4.3 Kommentarer**
+### 4.3 Kommentarer
 - Beslutningerne balancerer tekniske muligheder, organisatoriske krav og lovgivningsmæssige begrænsninger.  
 - Tabellen viser, hvordan arkitekturen understøtter de vigtigste kvalitetsmål og user stories.  
 - Dette fundament bruges i de følgende kapitler til at designe komponentstruktur, datamodel og sikkerhedsløsninger.
@@ -142,7 +139,7 @@ De arkitektoniske beslutninger udgør fundamentet for Unibar Locators systemarki
 ## Whitebox Overall System
 Systemet er opdelt i klart adskilte byggesten for at sikre skalerbarhed, genbrugelighed og nem vedligeholdelse. Denne opdeling giver et abstrakt overblik over systemet uden at afsløre implementeringsdetaljer.
 
-**Overview Diagram**  
+### Overview Diagram
 ![Overview diagram](images/1_Overviewdiagram.png)
 
 
