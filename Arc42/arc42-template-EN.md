@@ -26,7 +26,7 @@ Unibar Locator er en mobilapplikation, der henvender sig til studerende med det 
 | US5 | Som studerende vil jeg kunne give hver location en rating, så jeg nemmere kan sorterer i mulighederne. |  Brugere skal kunne vurdere og bedømme lokationer. |
 
 
-**Form** <br>
+**Funktionelle krav** <br>
 Link til [FURPS+](FK.md)
 
 
