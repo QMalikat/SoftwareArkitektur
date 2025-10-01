@@ -27,21 +27,13 @@ Unibar Locator er en mobilapplikation, der henvender sig til studerende med det 
 
 
 **Form** <br>
-Se funktionelle krav gennem user stories. (USandFK.md)
+Se funktionelle krav gennem user stories. [a relative link](FK.md)
 
 
 
 ## Quality Goals
 ![Categories of Quality
 Requirements](images/1_QualityGoals.png)
-
-
-**Motivation for interessenter**
-| Interessent         | Kvalitetsmål                                                                 |
-|---------------------|-------------------------------------------------------------------------------|
-| **Uddannelsesinstitution** | - Appen skal understøtte sociale relationer og reducere frafald.<br>- Privatliv og sikkerhed skal være garanteret for at beskytte institutionens omdømme. |
-| **Lokationsejere**  | - Information om lokationer skal være korrekt og nem at opdatere. <br> Mulighed for at indsætte tilbud /reklamer for at tiltrække flere kunder|
-| **Studerende**      | - Skal kunne finde lokationer og rutevejledning første gang uden introduktion.<br>- Lokationsoversigt skal indlæses på under 2 sekunder.<br>- Venne-funktion skal fungere stabilt og pålideligt.<br>- Deling af lokation/persondata skal altid være frivillig og let at slå fra. |
 
 **Funktionelt krav og kvalitetsmål**
 | Funktionelt krav | Relateret kvalitetsmål |
