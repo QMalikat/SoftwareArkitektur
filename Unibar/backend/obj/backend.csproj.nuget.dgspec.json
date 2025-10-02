@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {}
+    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {
+    "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
+        "projectUniqueName": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
-        "packagesPath": "C:\\Users\\hoeln\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hoeln\\Documents\\Github Repo\\SoftwareArkitektur\\Unibar\\backend\\obj\\",
+        "projectPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\backend.csproj",
+        "packagesPath": "C:\\Users\\Nina\\.nuget\\packages\\",
+        "outputPath": "E:\\Programmering\\Git repository\\SoftwareArkitektur\\Unibar\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hoeln\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nina\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -110,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

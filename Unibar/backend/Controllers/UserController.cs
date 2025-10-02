@@ -95,7 +95,7 @@ namespace Backend.Controllers
                 return NotFound();
 
             // Skifter mellem "admin" og "user"
-            user.UserType = user.UserType == "admin" ? "user" : "admin";
+            user.UserType = user.UserType == 1 ? 0 : 1;
             await _context.SaveChangesAsync();
 
             return Ok(new { user.Id, user.Email, user.UserType });

@@ -22,10 +22,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "NextTech API", Version = "v1" });
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Unibar API", Version = "v1" });
     options.SupportNonNullableReferenceTypes();
 
-    // Tilføj JWT support
+    // JWT support
     options.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -52,8 +52,14 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+// JWT Authentication
+var jwtKey = configuration["Jwt:Key"];
+if (string.IsNullOrEmpty(jwtKey))
+{
+    throw new Exception("JWT key is not configured in appsettings.json");
+}
 
-var key = configuration["Jwt:Key"];
+var keyBytes = Encoding.UTF8.GetBytes(jwtKey);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -69,11 +75,13 @@ builder.Services.AddAuthentication(options =>
         ValidateIssuer = false,
         ValidateAudience = false,
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+        IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
         ClockSkew = TimeSpan.Zero
     };
 });
 
+
+// Enable CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -85,21 +93,38 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseStaticFiles();
+// Test databaseforbindelse
+//using (var scope = app.Services.CreateScope())
+//{
+//    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+//   try
+//    {
+//        if (db.Database.CanConnect())
+//        {
+//            Console.WriteLine("Database connection OK!");
+//        }
+//        else
+//        {
+//            Console.WriteLine("Database connection FAILED.");
+//        }
+//    }
+//    catch (Exception ex)
+//    {
+//        Console.WriteLine("Database connection error: " + ex.Message);
+//    }
+//}
+// Test databaseforbindelse
 
+app.UseStaticFiles();
 app.UseCors("AllowAll");
 
-// Brug Swagger (kun i Development environment)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

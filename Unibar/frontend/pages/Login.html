@@ -20,11 +20,12 @@
             <article class="login-info">
                 <p id="data">Brug dit Unilogin</p>
             </article>
-            <article class="login-form">
-                <input type="email" id="email" placeholder="Enter email">
-                <input type="password" id="password" placeholder="Enter password">
-                <button id="submit" onclick="login()" class="login-button">Submit</button>
-            </article>
+            <form id="loginform">
+                <input type="email" id="login-email" placeholder="Enter email" required>
+                <input type="password" id="login-password" placeholder="Enter password" required>
+                <button type="submit">Login</button>
+                <div id="login-error" style="color:red;"></div>
+            </form>
         </section>
     </main>
     <footer>

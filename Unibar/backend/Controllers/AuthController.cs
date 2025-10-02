@@ -22,47 +22,61 @@ namespace Backend.Controllers
             _configuration = configuration;
         }
 
-        // POST /api/auth/login
+        // POST: /api/auth/login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            // Find user i databasen (case-insensitive)
             var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == loginRequest.Email);
+                .FirstOrDefaultAsync(u => u.Email.ToLower() == loginRequest.Email.ToLower());
 
             if (user == null)
                 return Unauthorized(new { message = "Wrong email or password." });
 
-            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.PasswordHash);
+            // Tjek password med BCrypt
+            bool isPasswordValid = false;
+            try
+            {
+                isPasswordValid = BCrypt.Net.BCrypt.Verify(loginRequest.Password, user.PasswordHash);
+            }
+            catch
+            {
+                return StatusCode(500, new { message = "Password verification failed." });
+            }
 
             if (!isPasswordValid)
                 return Unauthorized(new { message = "Wrong email or password." });
 
-            // Generér JWT
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+            // Hent JWT-key fra konfiguration
+            var jwtKey = _configuration["Jwt:Key"];
+            if (string.IsNullOrEmpty(jwtKey))
+                throw new Exception("JWT key is not configured in appsettings.json");
 
+            var key = Encoding.UTF8.GetBytes(jwtKey);
+
+            // Opret JWT-token
+            var tokenHandler = new JwtSecurityTokenHandler();
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("id", user.Id.ToString()),
                     new Claim("email", user.Email),
-                    new Claim("user_type", user.UserType)
+                    new Claim("user_type", user.UserType.ToString()) // <-- her
                 }),
                 Expires = DateTime.UtcNow.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var jwtToken = tokenHandler.WriteToken(token);
 
-            return Ok(new
-            {
-                token = jwtToken
-            });
+            return Ok(new { token = jwtToken });
         }
     }
 }
